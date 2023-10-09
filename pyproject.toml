@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "ua-borderpoints"
+version = "0.1.0"
+description = "Fetch and show data from the State Customs Service of Ukraine at kordon.customs.gov.ua"
+authors = ["Michael John <michael.john@gmx.at>"]
+readme = "README.md"
+packages = [{include = "ua_borderpoints"}]
+
+[tool.poetry.scripts]
+ua_borderpoints = 'ua_borderpoints.__main__:main'
+ua-borderpoints = 'ua_borderpoints.__main__:main'
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+requests = "^2.27.1"
+beautifulsoup4 = "^4.11.1"
+prettytable = "^3.2.0"
+argparse = "^1.4.0"
+python-time = "^0.3.0"
+lxml = "^4.9.0"
+pandas = "^2.1.1"
+jinja2 = "^3.1.2"
+tabulate = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+homepage = "https://github.com/amstelchen/ua-borderpoints"
+repository = "https://github.com/amstelchen/ua-borderpoints"
+documentation = "https://github.com/amstelchen/ua-borderpoints"
